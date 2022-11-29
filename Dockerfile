@@ -2,9 +2,6 @@ FROM debian:11
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -y install \
     python3 python3-dev python3-dev python3-pip python3-venv 
-RUN apt-get install git curl python3-pip ffmpeg -y
-RUN pip3 install -U pip
-RUN python3 -m pip install --upgrade pip
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
 RUN apt-get install -y nodejs
 ARG USER=root
